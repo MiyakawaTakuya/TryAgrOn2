@@ -26,19 +26,21 @@ if ($status == false) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-4/css/reset.css">
     <!-- <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-1/css/7-2-1.css"> -->
     <!-- <link rel="stylesheet" href="css/main.css"> -->
     <title>T r y A g r O n</title>
 </head>
 <!-- トップのメニューバー -->
 
-
 <body>
+
+
     <header id="header">
         <h4>TryAgrOn</h4>
         <div class="menu">
-            <nav class="menu">
-                <ul id="g-navi" class="menu">
+            <nav>
+                <ul id="g-navi">
                     <li><a href="#area-1">About</a></li>
                     <li><a href="#area-2">Hackathon List</a></li>
                     <li><a href="#area-3">Hold Hackathon</a></li>
@@ -48,7 +50,9 @@ if ($status == false) {
             </nav>
         </div>
     </header>
-    <a href="hackathon_input.php">入力画面</a>
+    <div id="particles-js"></div>
+    <!-- <div id="wrapper" class="main"> -->
+
     <div class="bg_test">
         <div class="line">
             <div class="bg_test-text">
@@ -56,53 +60,65 @@ if ($status == false) {
             </div>
         </div>
     </div>
-    <section id="area-1">
-        <div>
-            <h3>About</h3>
-            <p>"TryAgrOn"とは？ 山口県が実施するトライアスロンのような農業系のハッカソンの略称である. </p>
-            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
 
-        </div>
-        <!--/area1-->
-    </section>
-    <section id="area-2">
-        <div>
-            <h3>Hackathon List</h3>
-        </div>
-        <div class="main_body">
-            <!-- 検索結果をここにカードタイプで吐き出す -->
-            <div class="container">
-                <div id="output"></div>
-                <!-- class="row" -->
+    <div class="center">
+        <section id="area-1">
+            <div>
+                <h3>About</h3>
+                <p>"TryAgrOn"とは？ 山口県が実施するトライアスロンのような農業系のハッカソンの略称である. </p>
+                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+
             </div>
-        </div>
-        <!--/area2-->
-    </section>
+            <!--/area1-->
+        </section>
+        <section id="area-2">
+            <div>
+                <h3>Hackathon List</h3>
+            </div>
+            <div class="main_body">
+                <!-- 検索結果をここにカードタイプで吐き出す -->
+                <div class="container">
+                    <div id="output"></div>
+                    <!-- class="row" -->
+                </div>
+            </div>
+            <!--/area2-->
+        </section>
 
-    <section id="area-3">
-        <div>
-            <h3>Hold Hackathon</h3>
-            <p>"TryAgrOn"は農業に関わる課題解決を求める方であれば, どなたでも開催することができます. </p>
-            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-        </div>
-        <!--/area3-->
-    </section>
+        <section id="area-3">
+            <div>
+                <h3>Hold Hackathon</h3>
+                <p>"TryAgrOn"は農業に関わる課題解決を求める方であれば, どなたでも開催することができます. </p>
+                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+            </div>
+            <div class="button">
+                <button href="hackathon_input.php">ハッカソンの開催登録画面へ</button>
+            </div>
+            <!--/area3-->
+        </section>
 
-    <section id="area-4">
-        <div>
-            <h3>Barchix</h3>
-            <p>我々"Barchix"は,ITスキルを用いて地域の課題解決を目指すプロフェッショナル集団である. </p>
-            <p>メンバーはaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-        </div>
-        <!--/area4-->
-    </section>
+        <section id="area-4">
+            <div>
+                <h3>Barchix</h3>
+                <p>我々"Barchix"は,ITスキルを用いて地域の課題解決を目指すプロフェッショナル集団である. </p>
+                <p>メンバーはaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+            </div>
+            <!--/area4-->
+        </section>
+
+        <footer class="copyrights">
+            <p>copyrights 2021 Barchx All RIghts Reserved.</p>
+        </footer>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         //検索結果の表示 カード型の挿入HTMLここから
         const data = <?= json_encode($result) ?>;
@@ -121,7 +137,7 @@ if ($status == false) {
             <h2 class="card-title" id="event_date">開催日時:${x.event_date}</h2>
             <h2 class="card-title" id="event_location">開催場所:${x.event_location}</h2>
             <h2 class="card-title" id="reward">報酬:${x.reward}</h2>
-            <h2 class="card-title" id="upper_limit">上限人数${x.upper_limit}人</h2>
+            <h2 class="card-title" id="upper_limit">上限人数:${x.upper_limit}人</h2>
             <input name="id" type="hidden" value="${x.id}">
             </div>
         </div>
@@ -134,6 +150,7 @@ if ($status == false) {
         //カード型の挿入HTMLここまで
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"> </script>
+    <script src="main.js"></script>
 
 
 </body>
