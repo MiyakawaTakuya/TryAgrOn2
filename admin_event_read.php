@@ -56,6 +56,10 @@ if ($status == false) {
 </head>
 
 <body>
+    <div class="container">
+        <div id="output"></div>
+        <!-- class="row" -->
+    </div>
     <!-- <fieldset>
         <legend>ハッカソン一覧</legend>
         <a href="hackathon_input.php">入力画面</a>
