@@ -8,24 +8,35 @@
 }
 
 .bg_test {
-    text-align:  center;    /* 文字中央寄せ */
+    text-align:  center;    
     display:flex;
     justify-content:center;
     align-items: center;
-    height:660px;
+    height:800px;
     width:100%;
     font-family: Futura;
-    margin-top: -40px;
+    /* margin-top: 240px; */
     color:rgba(240, 248, 255, 0.87);
     border: solid 2px;      /* 枠線指定 */
-    background-image: url(../img/top_back.JPEG);    /* 背景画像指定 */
+    /* background-image: url(../img/top_back.JPEG);    背景画像指定 */
+    background: url(../img/top_back.JPEG)center center / cover no-repeat;    /* 背景画像指定 */
     background-size:  cover;  
+    /* object-fit: cover; */
+    /* object-position: center; */
 }
+
 
 .line{
     border: solid 5px;
     color:rgba(240, 248, 255, 0.719);
     margin:10px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 form{
@@ -34,9 +45,13 @@ form{
 
 body{
     background-color: aliceblue;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
 }
 
-h1 {font-size:30px;}
+h1 {font-size:26px;}
 
 h2 {font-size:24px;}
 h3 {font-size:56px;
@@ -68,13 +83,30 @@ p{
     font-size: 20px;
 
 }
+.center{
+    /* display:flex;
+    justify-content:center;
+    align-items: column;
+    flex-direction: column; */
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+section{
+padding:50px 0;
+display:flex;
+    justify-content:center;
+    align-items: column;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .list{
     display:flex;
     justify-content:center;
     align-items: center;
     width:100%;
-    
 }
 
 .card{
@@ -115,7 +147,7 @@ p{
 	align-items: center;
 	background:rgb(246, 246, 246);
 	color:rgb(36, 35, 35);
-	text-align: center;
+	/* text-align: center; */
 	padding: 30px;
 }
 
@@ -180,12 +212,55 @@ padding:10px;
 font-size:24px;
 }
 
-section{
-padding:50px 0;
-}
+
 
 .menu{
     display:flex;
     justify-content:center;
     align-items: center;
 }
+
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+#wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  color: rgb(3, 156, 23);
+}
+
+/*========= particle js を描画するエリア設定 ===============*/
+html,body{
+  /*高さを100%にして描画エリアをとる*/
+  height: 100%;
+  /* width: 100%; */
+}
+
+#particles-js{ 
+  position:fixed;/*描画固定*/
+  z-index:-1;/*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color:#e7eff8;/*背景色*/
+}
+
+#wrapper{
+  position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  /* width:100%; */
+  /* height: 100%; */
+}
+
+
+.copyrights {
+    color: rgba(84, 85, 85, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+

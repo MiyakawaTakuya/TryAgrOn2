@@ -9,7 +9,7 @@
 </head>
 
 <body>
-        <form action="users_create.php" method="POST">
+    <form action="users_create.php" method="POST">
         <div class="mt-4">
             <input type="text" name="user_name" placeholder="氏名" class="p-2 rounded border-1" style="width: 500px;">
         </div>
@@ -33,7 +33,7 @@
         </div>
         <div class="mt-3 text-center">
             <p class="d-inline text-secondary ">すでにアカウントをお持ちの方は</p>
-            <a class="d-inline text-secondary " href="../login.php">ログインへ</a>
+            <a class="d-inline text-secondary " href="./user_login.php">ログインへ</a>
         </div>
     </form>
 </body>
