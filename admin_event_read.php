@@ -32,7 +32,6 @@ if ($status == false) {
         $output .= "<td>{$record["upper_limit"]}</td>";
         $output .= "<td>{$record["reward"]}</td>";
         $output .= "<td>{$record["join_place"]}</td>";
-        $output .= "<td><a href='events_edit.php?id={$record["id"]}'>edit</a></td>";
         $output .= "<td><a href='events_delete.php?id={$record["id"]}'>delete</a></td>";
 
         $output .= "</tr>";
@@ -53,7 +52,7 @@ if ($status == false) {
 <body>
     <fieldset>
         <legend>ハッカソン一覧</legend>
-        <a href="todo_input.php">入力画面</a>
+        <a href="hackathon_input.php">入力画面</a>
         <a href="todo_logout.php">ログアウト</a>
         <table>
             <thead>
