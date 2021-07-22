@@ -67,7 +67,7 @@ if ($status == false) {
     <table>
         <thead>
             <tr>
-            <th>ハッカソン名</th>
+            <th>ハッカソンハッカソン名</th>
             <th>開催予定日</th>
             <th>主催者</th>
             <th>課題</th>
