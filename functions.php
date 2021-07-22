@@ -14,16 +14,15 @@ function connect_to_db()
   }
 }
 
-// function check_session_id()
-// {
-//   if (
-//     !isset($_SESSION["session_id"]) ||
-//     $_SESSION["session_id"] != session_id()
-//   ) {
-//     header("Location: /../G's/vr%20_shop/login.php");
-//   } else {
-//     session_regenerate_id(true);
-//     $_SESSION["session_id"] = session_id();
-//   }
-// }
-
+function check_session_id()
+{
+  if (
+    !isset($_SESSION["session_id"]) ||
+    $_SESSION["session_id"] != session_id()
+  ) {
+    header("Location:todo_login.php");
+  } else {
+    session_regenerate_id(true);
+    $_SESSION["session_id"] = session_id();
+  }
+}
