@@ -1,37 +1,89 @@
 .bg_test-text {
     border:  solid 1px;                             /* 枠線指定 */
     display:  inline-block;                         /* インラインブロックにする */
-    padding: 10px 20px;                             /* 余白指定 */
-    background-color: rgba(255, 255, 255, 0.7);     /* 背景色指定 */
+    padding: 20px 40px;                             /* 余白指定 */    /* 背景色指定 */
+    font-family: Futura;
+    font-size:140px;
+    letter-spacing: 20px;
 }
+
 .bg_test {
     text-align:  center;    /* 文字中央寄せ */
-
+    display:flex;
+    justify-content:center;
+    align-items: center;
     height:660px;
-    margin-top: 40px;
-    /* padding:  150px;        余白指定 */
-
+    width:100%;
+    font-family: Futura;
+    margin-top: -40px;
+    color:rgba(240, 248, 255, 0.87);
     border: solid 2px;      /* 枠線指定 */
-    background-image: url(img/);    /* 背景画像指定 */
+    background-image: url(../img/top_back.JPEG);    /* 背景画像指定 */
+    background-size:  cover;  
 }
 
+form{
+    width:100%;
+}
 
 body{
     background-color: aliceblue;
-    /* background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-    /* background-size: 500% 500%; */
 }
 
-/* @font-face { */
-  /* font-family: '任意のフォント名'; //好きな名前を設定します。 */
-  /* src: url('フォントファイルへのパス') format('フォントの形式'); } */
+h1 {font-size:30px;}
 
+h2 {font-size:24px;}
+h3 {font-size:56px;
+    color:rgb(32, 32, 32);
+    font-family: Futura;
+    letter-spacing: 20px;
+    margin-left: 1em;
+    margin-top:24px;
+    margin-bottom:24px;
+}
+p{
+    font-family:sans-serif;
+    letter-spacing: 3px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top:12px;
+    margin-bottom:12px;
+    font-size: 20px;
 
-h1 {
-    font-size:30px;
 }
 
-h2 {
-    font-size:24px;
+.list{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    
 }
 
+.card{
+    width:100%;
+    border-radius: 1em;
+    background-color: rgba(210, 230, 248, 0.404);
+}
+
+.row{
+    width:100%;
+    /* width:1260px; */
+}
+.img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1em 0 0 1em/1em 0 0 1em;
+}
+
+.card-img-top{
+    border-radius: 1em 0 0 1em/1em 0 0 1em;
+}
+
+/* .text-left{
+    display:flex;
+    /* justify-content:flex-start; */
+    /* align-items: center; 
+    flex-direction: column;
+} */

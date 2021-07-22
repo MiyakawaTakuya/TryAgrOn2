@@ -35,16 +35,42 @@ if ($status == false) {
     <a href="hackathon_input.php">入力画面</a>
     <div class="bg_test">
         <div class="bg_test-text">
-            背景画像を設定します
+            TryAgrOn
         </div>
     </div>
+    <div>
+        <h3>About</h3>
+        <p>"TryAgrOn"とは？ 山口県が実施するトライアスロンのような農業系のハッカソンの略称である. </p>
+        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
 
+    </div>
+    <div>
+        <h3>Hackathon List</h3>
+    </div>
     <div class="main_body">
         <!-- 検索結果をここにカードタイプで吐き出す -->
         <div class="container">
-            <div class="row" id="output"></div>
+            <div id="output"></div>
+            <!-- class="row" -->
         </div>
     </div>
+
+    <div>
+        <h3>Hold Hackathon</h3>
+        <p>"TryAgrOn"は農業に関わる課題解決を求める方であれば, どなたでも開催することができます. </p>
+        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+    </div>
+
+    <div>
+        <h3>Barchix</h3>
+        <p>我々"Barchix"は,ITスキルを用いて地域の課題解決を目指すプロフェッショナル集団である. </p>
+        <p>メンバーはaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+    </div>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
@@ -53,23 +79,23 @@ if ($status == false) {
         const output_data = []; //空の配列を作ってそこのプッシュでぽいぽいしてく
         data.forEach(function(x) {
             output_data.push(`
-        <div class="col-sm-3 my-3">
+        <div class=" my-3" >
         <form action="hackathon_show.php" method="get">
         <button type="submit" class="card" style="color: black; " >
-        <div class=>
+        <div class="list">
+            <div class="img">
             <img src="${x.img}" class="card-img-top" alt="...">
+            </div>
 
-            <div class="card-body" style="max-width: 180px;">
-
+            <div class="card-body text-start" >
             <h1 class="card-title" id="hackathon_name">イベント名:${x.hackathon_name}</h1>
             <h2 class="card-title" id="event_date">開催日時:${x.event_date}</h2>
-            <h3 class="card-title" id="event_location">開催場所:${x.event_location}</h3>
-            <h3 class="card-title" id="reward">報酬:${x.reward}</h3>
-            <h3 class="card-title" id="upper_limit">上限人数${x.upper_limit}人</h3>
-            </div>
-            <div>
+            <h2 class="card-title" id="event_location">開催場所:${x.event_location}</h2>
+            <h2 class="card-title" id="reward">報酬:${x.reward}</h2>
+            <h2 class="card-title" id="upper_limit">上限人数${x.upper_limit}人</h2>
             <input name="id" type="hidden" value="${x.id}">
             </div>
+        </div>
         </button>
         </form>
         </div>
