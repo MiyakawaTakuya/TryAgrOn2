@@ -48,6 +48,10 @@
             イメージ写真: <input type="file" name="item_image" accept="image/*">
         </div>
         <div>
+            <input type="hidden" name="organizer_id" >
+        </div>
+
+        <div>
             <button>送信</button>
         </div>
     </form>
