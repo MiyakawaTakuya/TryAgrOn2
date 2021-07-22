@@ -1,6 +1,6 @@
 <?php
 
-include('../functions.php');
+include('./functions.php');
 $pdo = connect_to_db();
 
 var_dump($_POST);
