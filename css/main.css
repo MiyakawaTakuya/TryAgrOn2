@@ -1,12 +1,35 @@
 .bg_test-text {
     border:  solid 1px;                             /* 枠線指定 */
     display:  inline-block;                         /* インラインブロックにする */
-    padding: 10px 20px;                             /* 余白指定 */
-    background-color: rgba(255, 255, 255, 0.7);     /* 背景色指定 */
+    padding: 20px 40px;   
+    font-family: Futura;                          /* 余白指定 */
+    /* background-color: rgba(255, 255, 255, 0.1);  */
+    color:aliceblue;    /* 背景色指定 */
+    font-size:140px;
+    letter-spacing: 15px;
 }
 .bg_test {
+    display:flex;
+    justify-content:center;
+    align-items: center;
     text-align:  center;    /* 文字中央寄せ */
-    padding:  150px;        /* 余白指定 */
+    height:660px;
+    /* padding:  150px;        余白指定 */
     border: solid 2px;      /* 枠線指定 */
-    background-image: url(img/);    /* 背景画像指定 */
+    background-image: url(../img/top_back.JPEG);    /* 背景画像指定 */
+    background-size:  cover;  
+}
+
+
+/* @font-face { */
+  /* font-family: '任意のフォント名'; //好きな名前を設定します。 */
+  /* src: url('フォントファイルへのパス') format('フォントの形式'); } */
+
+
+h1 {
+    font-size:30px;
+}
+
+h2 {
+    font-size:24px;
 }
