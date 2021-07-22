@@ -20,6 +20,7 @@ $id = $_GET["id"];
 </head>
 
 <body>
+    <a href="./hackathon_show.php?id=<?=$id?>">戻る</a>
         <form action="member_create.php" method="POST">
         <div class="mt-4">
             <input type="text" name="member_name" placeholder="氏名" class="p-2 rounded border-1" style="width: 500px;">
