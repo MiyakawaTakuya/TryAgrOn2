@@ -2,7 +2,7 @@
 
 function connect_to_db()
 {
-  $dbn = 'mysql:dbname=varchx;charset=utf8;port=3306;host=localhost';
+  $dbn = 'mysql:dbname=barchx;charset=utf8;port=3306;host=localhost';
   $user = 'root';
   $pwd = '';
 
