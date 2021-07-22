@@ -45,7 +45,7 @@
             報酬・謝礼: <input type="text" name="reward">
         </div>
         <div>
-            イメージ写真: <input type="file" name="item_image" accept="image/*">
+            イメージ写真: <input type="file" name="img" accept="image/*">
         </div>
         <div>
             <input type="hidden" name="organizer_id" >
