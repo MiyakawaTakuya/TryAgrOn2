@@ -30,9 +30,9 @@
         </div>
         <div>
             参加方法: <select name="join_place" >
-                        <option value="1">オンサイト</option>
-                        <option value="2">オンライン</option>
-                        <option value="3">オン・オフ</option>
+                        <option value="オンサイト">オンサイト</option>
+                        <option value="オンライン"></option>
+                        <option value="オン・オフ">オン・オフ</option>
                     </select>
         </div>
         <div>
