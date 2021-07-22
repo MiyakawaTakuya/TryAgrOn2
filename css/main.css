@@ -14,12 +14,18 @@
     align-items: center;
     text-align:  center;    /* 文字中央寄せ */
     height:660px;
+    margin-top: 40px;
     /* padding:  150px;        余白指定 */
     border: solid 2px;      /* 枠線指定 */
     background-image: url(../img/top_back.JPEG);    /* 背景画像指定 */
     background-size:  cover;  
 }
 
+body{
+    background-color: aliceblue;
+    /* background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    /* background-size: 500% 500%; */
+}
 
 /* @font-face { */
   /* font-family: '任意のフォント名'; //好きな名前を設定します。 */
