@@ -20,7 +20,7 @@ if ($status == false) {
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head id="header">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -30,48 +30,78 @@ if ($status == false) {
     <!-- <link rel="stylesheet" href="css/main.css"> -->
     <title>T r y A g r O n</title>
 </head>
+<!-- トップのメニューバー -->
+
 
 <body>
+    <header id="header">
+        <h4>TryAgrOn</h4>
+        <div class="menu">
+            <nav class="menu">
+                <ul id="g-navi" class="menu">
+                    <li><a href="#area-1">About</a></li>
+                    <li><a href="#area-2">Hackathon List</a></li>
+                    <li><a href="#area-3">Hold Hackathon</a></li>
+                    <li><a href="#area-4">Barchix</a></li>
+                    <li><a href="#area-4">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <a href="hackathon_input.php">入力画面</a>
     <div class="bg_test">
-        <div class="bg_test-text">
-            TryAgrOn
+        <div class="line">
+            <div class="bg_test-text">
+                TryAgrOn
+            </div>
         </div>
     </div>
-    <div>
-        <h3>About</h3>
-        <p>"TryAgrOn"とは？ 山口県が実施するトライアスロンのような農業系のハッカソンの略称である. </p>
-        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+    <section id="area-1">
+        <div>
+            <h3>About</h3>
+            <p>"TryAgrOn"とは？ 山口県が実施するトライアスロンのような農業系のハッカソンの略称である. </p>
+            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
 
-    </div>
-    <div>
-        <h3>Hackathon List</h3>
-    </div>
-    <div class="main_body">
-        <!-- 検索結果をここにカードタイプで吐き出す -->
-        <div class="container">
-            <div id="output"></div>
-            <!-- class="row" -->
         </div>
-    </div>
+        <!--/area1-->
+    </section>
+    <section id="area-2">
+        <div>
+            <h3>Hackathon List</h3>
+        </div>
+        <div class="main_body">
+            <!-- 検索結果をここにカードタイプで吐き出す -->
+            <div class="container">
+                <div id="output"></div>
+                <!-- class="row" -->
+            </div>
+        </div>
+        <!--/area2-->
+    </section>
 
-    <div>
-        <h3>Hold Hackathon</h3>
-        <p>"TryAgrOn"は農業に関わる課題解決を求める方であれば, どなたでも開催することができます. </p>
-        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-    </div>
+    <section id="area-3">
+        <div>
+            <h3>Hold Hackathon</h3>
+            <p>"TryAgrOn"は農業に関わる課題解決を求める方であれば, どなたでも開催することができます. </p>
+            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+        </div>
+        <!--/area3-->
+    </section>
 
-    <div>
-        <h3>Barchix</h3>
-        <p>我々"Barchix"は,ITスキルを用いて地域の課題解決を目指すプロフェッショナル集団である. </p>
-        <p>メンバーはaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-        <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-    </div>
+    <section id="area-4">
+        <div>
+            <h3>Barchix</h3>
+            <p>我々"Barchix"は,ITスキルを用いて地域の課題解決を目指すプロフェッショナル集団である. </p>
+            <p>メンバーはaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+            <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+        </div>
+        <!--/area4-->
+    </section>
 
 
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         //検索結果の表示 カード型の挿入HTMLここから
@@ -86,7 +116,6 @@ if ($status == false) {
             <div class="img">
             <img src="${x.img}" class="card-img-top" alt="...">
             </div>
-
             <div class="card-body text-start" >
             <h1 class="card-title" id="hackathon_name">イベント名:${x.hackathon_name}</h1>
             <h2 class="card-title" id="event_date">開催日時:${x.event_date}</h2>
