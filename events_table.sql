@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2021 年 7 月 22 日 08:31
+-- 生成日時: 2021 年 7 月 22 日 08:43
 -- サーバのバージョン： 10.4.19-MariaDB
 -- PHP のバージョン: 8.0.7
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- データベース: `gsacf_d08_10`
+-- データベース: `barchx`
 --
 
 -- --------------------------------------------------------
@@ -32,6 +32,7 @@ CREATE TABLE `events_table` (
   `hackathon_name` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `event_date` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `event_location` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `organizer_id` int(12) NOT NULL,
   `organizer_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pain` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `expectation` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -49,8 +50,8 @@ CREATE TABLE `events_table` (
 -- テーブルのデータのダンプ `events_table`
 --
 
-INSERT INTO `events_table` (`id`, `hackathon_name`, `event_date`, `event_location`, `organizer_name`, `pain`, `expectation`, `requirements`, `upper_limit`, `reward`, `img`, `join_place`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(1, '棚田の草刈り効率化プロダクト開発', '20210731', '山口県下関市', '山口健太', '棚田の草刈りをしたいが地形が入り組んでおり、刈り残しが発生。非効率になっている', '草刈りの効率化', 'メンタルタフネス', 9, '棚田米10kg', NULL, 'オン・オフ両方', 0, '2021-07-22 15:28:08', '2021-07-22 15:28:08');
+INSERT INTO `events_table` (`id`, `hackathon_name`, `event_date`, `event_location`, `organizer_id`, `organizer_name`, `pain`, `expectation`, `requirements`, `upper_limit`, `reward`, `img`, `join_place`, `is_deleted`, `created_at`, `updated_at`) VALUES
+(1, '棚田の草刈り効率化プロダクト開発', '20210731', '山口県下関市', 0, '山口健太', '棚田の草刈りをしたいが地形が入り組んでおり、刈り残しが発生。非効率になっている', '草刈りの効率化', 'メンタルタフネス', 9, '棚田米10kg', NULL, 'オン・オフ両方', 0, '2021-07-22 15:28:08', '2021-07-22 15:28:08');
 
 --
 -- ダンプしたテーブルのインデックス
