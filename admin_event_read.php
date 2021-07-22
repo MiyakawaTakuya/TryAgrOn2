@@ -50,7 +50,7 @@ if ($status == false) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adminevent.css">
     <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
     <title>ハッカソン一覧画面</title>
 </head>
@@ -92,6 +92,7 @@ if ($status == false) {
         const output_data = []; //空の配列を作ってそこのプッシュでぽいぽいしてく
         data.forEach(function(x) {
             output_data.push(`
+        <div class="adminevents">
         <div class=" my-3" >
         <form action="hackathon_show.php" method="get">
         <button type="submit" class="card" style="color: black; " >
@@ -99,23 +100,33 @@ if ($status == false) {
             <div class="img">
             <img src="${x.img}" class="card-img-top" alt="...">
             </div>
-
             <div class="card-body text-start" >
             <h1 class="card-title" id="hackathon_name">イベント名:${x.hackathon_name}</h1>
             <h2 class="card-title" id="event_date">開催日時:${x.event_date}</h2>
             <h2 class="card-title" id="event_location">開催場所:${x.event_location}</h2>
             <h2 class="card-title" id="reward">報酬:${x.reward}</h2>
-            <h2 class="card-title" id="upper_limit">上限人数${x.upper_limit}人</h2>
-            <a href='events_delete.php?id="id">${x.id}delete</a>       
+            <h2 class="card-title" id="upper_limit">上限人数${x.upper_limit}人</h2>   
             <input name="id" type="hidden" value="${x.id}">
             </div>
         </div>
-        </button>
+        </button>  
+        </div>
         </form>
+        </div>
+        <div>
+         <a href = 'events_delete.php?id="id"'> delete </a>  
+        </div>
         </div>
         `)
         });
         $("#output").html(output_data);
+        // const output_delete_button = []; //空の配列を作ってそこのプッシュでぽいぽいしてく
+        // data.forEach(function(x) {
+        //     output_delete_button.push(`
+        // <a href = 'events_delete.php?id="id"'> delete </a>  
+        //         `)
+        // });
+        // $("#output_button").html(output_delete_button);
         //カード型の挿入HTMLここまで
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"> </script>
