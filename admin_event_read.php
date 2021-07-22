@@ -55,7 +55,7 @@ if ($status == false) {
         <legend>ハッカソン一覧</legend>
         <a href="hackathon_input.php">入力画面</a>
         <a href="todo_logout.php">ログアウト</a>
-        <table>
+        <table border="1" class="table table-hover" class="table-responsive">
             <thead>
                 <tr>
                     <th>ハッカソン名</th>
