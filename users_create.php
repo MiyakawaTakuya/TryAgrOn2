@@ -1,0 +1,77 @@
+<?php
+
+include('../functions.php');
+$pdo = connect_to_db();
+
+var_dump($_POST);
+
+if (
+    // 氏名
+    !isset($_POST['user_name']) || $_POST['user_name'] == '' ||
+    // フリガナ
+    !isset($_POST['rubi_name']) || $_POST['rubi_name'] == '' ||
+    // メールアドレス
+    !isset($_POST['email']) || $_POST['email'] == '' ||
+    // 電話番号
+    !isset($_POST['tel']) || $_POST['tel'] == '' ||
+    // 年齢
+    !isset($_POST['age']) || $_POST['age'] == '' ||
+    // パスワード
+    !isset($_POST['password']) || $_POST['password'] == ''
+) {
+    echo json_encode(["error_msg" => "no input"]);
+    exit();
+}
+
+$user_name = $_POST['user_name'];
+$rubi_name = $_POST['rubi_name'];
+$email = $_POST['email'];
+$tel = $_POST['tel'];
+$age = $_POST['age'];
+$password = $_POST['password'];
+
+// $dbn = 'mysql:dbname=gsacf_l05_06;charset=utf8;port=3306;host=localhost';
+// $user = 'root';
+// $pwd = '';
+
+// try {
+//   $pdo = new PDO($dbn, $user, $pwd);
+// } catch (PDOException $e) {
+//   echo json_encode(["db error" => "{$e->getMessage()}"]);
+//   exit();
+// }
+
+
+$sql = 'INSERT INTO users_table(user_id, user_name, rubi_name, email, tel, age, password, is_deleted, created_at, updated_at) VALUES(NULL, :user_name, :rubi_name, :email, :tel, :age, :password, sysdate(), sysdate())';
+
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(':user_name', $user_name, PDO::PARAM_STR);
+$stmt->bindValue(':rubi_name', $rubi_name, PDO::PARAM_STR);
+$stmt->bindValue(':email', $email, PDO::PARAM_STR);
+$stmt->bindValue(':tel', $tel, PDO::PARAM_STR);
+$stmt->bindValue(':age', $age, PDO::PARAM_INT);
+$stmt->bindValue(':password', $password, PDO::PARAM_STR);
+$status = $stmt->execute();
+
+if ($status == false) {
+    $error = $stmt->errorInfo();
+    echo json_encode(["error_msg" => "{$error[2]}"]);
+    exit();
+} else {
+    header("Location:users_input.php");
+    exit();
+}
+
+
+// user_id   INT INT(12) 主キー
+
+// user_name VARCHAR(32)
+// rubi_name VARCHARA(32)
+// email VARCHARA(32)
+// tel VARCHARA(11)
+// age INT(2)
+// password VARCHARA(32)
+
+// is_deleted INT(1)
+// created_at  DATETIME
+// updated_at  DATETIME
