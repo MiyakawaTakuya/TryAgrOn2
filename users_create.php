@@ -1,10 +1,10 @@
 <?php
 
-include('../functions.php');
+include('functions.php');
 $pdo = connect_to_db();
 
-var_dump($_POST);
-
+// var_dump($_POST);
+// exit();
 if (
     // 氏名
     !isset($_POST['user_name']) || $_POST['user_name'] == '' ||
@@ -30,19 +30,7 @@ $tel = $_POST['tel'];
 $age = $_POST['age'];
 $password = $_POST['password'];
 
-// $dbn = 'mysql:dbname=gsacf_l05_06;charset=utf8;port=3306;host=localhost';
-// $user = 'root';
-// $pwd = '';
-
-// try {
-//   $pdo = new PDO($dbn, $user, $pwd);
-// } catch (PDOException $e) {
-//   echo json_encode(["db error" => "{$e->getMessage()}"]);
-//   exit();
-// }
-
-
-$sql = 'INSERT INTO users_table(user_id, user_name, rubi_name, email, tel, age, password, is_deleted, created_at, updated_at) VALUES(NULL, :user_name, :rubi_name, :email, :tel, :age, :password, sysdate(), sysdate())';
+$sql = 'INSERT INTO users_table(id, user_name, rubi_name, email, tel, age, password, is_deleted, created_at, updated_at) VALUES(NULL, :user_name, :rubi_name, :email, :tel, :age, :password,0, sysdate(), sysdate())';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':user_name', $user_name, PDO::PARAM_STR);
