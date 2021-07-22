@@ -1,7 +1,7 @@
 <?php
 var_dump($_POST);
 exit;
-include('./functions.php');
+include('functions.php');
 $pdo = connect_to_db();
 
 if (
@@ -71,7 +71,7 @@ $organizer_id = $_POST['organizer_id'];
 
 $img = $_FILES['img']['name'];
 
-$upload = "./img/";
+$upload = "img/";
 if (move_uploaded_file($_FILES['img']['tmp_name'], $upload . $img)) {
     echo 'アップロード成功';
 } else {
