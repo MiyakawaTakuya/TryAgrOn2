@@ -24,7 +24,7 @@ if (
     // 報酬・謝礼
     !isset($_POST['reward']) || $_POST['reward'] == '' ||
     // 参加方法
-    !isset($_POST['join_place']) || $_POST['join_place'] == '' 
+    !isset($_POST['join_place']) || $_POST['join_place'] == ''
     // 主催者id
     // !isset($_POST['organizer_id']) || $_POST['organizer_id'] == ''
 
