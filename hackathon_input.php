@@ -36,7 +36,7 @@
                     </select>
         </div>
         <div>
-            参加者条件: <input type="number" name="upper_limit">
+            参加者条件: <input type="text" name="requirements">
         </div>
         <div>
             参加者上限: <input type="number" name="upper_limit"> 人
