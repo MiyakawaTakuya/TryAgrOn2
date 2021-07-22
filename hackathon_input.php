@@ -29,14 +29,14 @@
             期待すること: <input type="text" name="expectation">
         </div>
         <div>
-            参加方法: <select name="join_place" >
-                        <option value="オンサイト">オンサイト</option>
-                        <option value="オンライン"></option>
-                        <option value="オン・オフ">オン・オフ</option>
-                    </select>
+            参加方法: <select name="join_place">
+                <option value="オンサイト">オンサイト</option>
+                <option value="オンライン">オンライン</option>
+                <option value="オン・オフ">オン・オフ混合</option>
+            </select>
         </div>
         <div>
-            参加者条件: <input type="number" name="upper_limit">
+            参加者条件: <input type="number" name="requirements">
         </div>
         <div>
             参加者上限: <input type="number" name="upper_limit"> 人
@@ -48,7 +48,7 @@
             イメージ写真: <input type="file" name="img" accept="image/*">
         </div>
         <div>
-            <input type="hidden" name="organizer_id" >
+            <input type="hidden" name="organizer_id">
         </div>
 
         <div>
