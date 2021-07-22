@@ -1,25 +1,20 @@
 .bg_test-text {
     border:  solid 1px;                             /* 枠線指定 */
     display:  inline-block;                         /* インラインブロックにする */
-    padding: 20px 40px;   
-    font-family: Futura;                          /* 余白指定 */
-    /* background-color: rgba(255, 255, 255, 0.1);  */
-    color:aliceblue;    /* 背景色指定 */
-    font-size:140px;
-    letter-spacing: 15px;
+    padding: 10px 20px;                             /* 余白指定 */
+    background-color: rgba(255, 255, 255, 0.7);     /* 背景色指定 */
 }
 .bg_test {
-    display:flex;
-    justify-content:center;
-    align-items: center;
     text-align:  center;    /* 文字中央寄せ */
+
     height:660px;
     margin-top: 40px;
     /* padding:  150px;        余白指定 */
+
     border: solid 2px;      /* 枠線指定 */
-    background-image: url(../img/top_back.JPEG);    /* 背景画像指定 */
-    background-size:  cover;  
+    background-image: url(img/);    /* 背景画像指定 */
 }
+
 
 body{
     background-color: aliceblue;
@@ -39,3 +34,4 @@ h1 {
 h2 {
     font-size:24px;
 }
+

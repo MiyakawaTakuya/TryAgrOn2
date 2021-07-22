@@ -35,7 +35,7 @@ if ($status == false) {
     <a href="hackathon_input.php">入力画面</a>
     <div class="bg_test">
         <div class="bg_test-text">
-            TryAgrOn
+            背景画像を設定します
         </div>
     </div>
 
@@ -63,9 +63,9 @@ if ($status == false) {
 
             <h1 class="card-title" id="hackathon_name">イベント名:${x.hackathon_name}</h1>
             <h2 class="card-title" id="event_date">開催日時:${x.event_date}</h2>
-            <h2 class="card-title" id="event_location">開催場所:${x.event_location}</h2>
-            <h2 class="card-title" id="reward">報酬:${x.reward}</h2>
-            <h2 class="card-title" id="upper_limit">上限人数${x.upper_limit}人</h2>
+            <h3 class="card-title" id="event_location">開催場所:${x.event_location}</h3>
+            <h3 class="card-title" id="reward">報酬:${x.reward}</h3>
+            <h3 class="card-title" id="upper_limit">上限人数${x.upper_limit}人</h3>
             </div>
             <div>
             <input name="id" type="hidden" value="${x.id}">

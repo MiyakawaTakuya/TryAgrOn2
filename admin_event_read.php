@@ -21,7 +21,7 @@ if ($status == false) {
     $output = "";
     foreach ($result as $record) {
         $output .= "<tr>";
-        // $output .= "<td><img src='{$record["img"]}' height=150px></td>";
+        $output .= "<td><img src='{$record["img"]}' height=150px></td>";
         $output .= "<td>{$record["hackathon_name"]}</td>";
         $output .= "<td>{$record["event_date"]}</td>";
         $output .= "<td>{$record["event_location"]}</td>";
