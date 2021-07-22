@@ -107,6 +107,8 @@ if ($status_member == false) {
             <p class="posted_time"><?= $record['post_created_at'] ?></p>
         </div>
 
+        <a href="./member_input.php?id=<?=$id?>">応募する</a>
+
 
 
         <!-- コメント表示 -->
