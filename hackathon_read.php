@@ -24,9 +24,10 @@ if ($status == false) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
-    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-1/css/7-2-1.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-1/css/7-2-1.css"> -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <title>T r y A g r O n</title>
 </head>
 
@@ -43,7 +44,6 @@ if ($status == false) {
         <div class="container">
             <div class="row" id="output"></div>
         </div>
-
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -56,6 +56,7 @@ if ($status == false) {
         <div class="col-sm-3 my-3">
         <form action="hackathon_show.php" method="get">
         <button type="submit" class="card" style="color: black; " >
+        <div class=>
             <img src="${x.img}" class="card-img-top" alt="...">
 
             <div class="card-body" style="max-width: 180px;">
