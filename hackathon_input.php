@@ -5,57 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/show.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>ハッカソン登録画面</title>
 </head>
 
 <body>
-    <form action="hackathon_create.php" method="POST" enctype="multipart/form-data">
-        <a href="hackathon_read.php">一覧画面</a>
-        <div>
-            ハッカソン名: <input type="text" name="hackathon_name">
-        </div>
-        <div>
-            開催予定日: <input type="date" name="event_date">
-        </div>
-        <div>
-            開催場所: <input type="text" name="event_location">
-        </div>
-        <div>
-            主催者: <input type="text" name="organizer_name">
-        </div>
-        <div>
-            課題感: <input type="text" name="pain">
-        </div>
-        <div>
-            期待すること: <input type="text" name="expectation">
-        </div>
-        <div>
-            参加方法: <select name="join_place">
-                <option value="オンサイト">オンサイト</option>
-                <option value="オンライン">オンライン</option>
-                <option value="オン・オフ">オン・オフ混合</option>
-            </select>
-        </div>
-        <div>
-            参加者条件: <input type="text" name="requirements">
-        </div>
-        <div>
-            参加者上限: <input type="number" name="upper_limit"> 人
-        </div>
-        <div>
-            報酬・謝礼: <input type="text" name="reward">
-        </div>
-        <div>
-            イメージ写真: <input type="file" name="img" accept="image/*">
-        </div>
-        <div>
-            <input type="hidden" name="organizer_id">
-        </div>
+    
+    <div class="text-center">
+        <form action="hackathon_create.php" method="POST" enctype="multipart/form-data">
+            <a class="text-secondary" href="hackathon_read.php">一覧画面</a>
+            <div class="mt-4 mb-4">
+                <h1>ハッカソン情報登録</h1>
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="ハッカソン名" type="text" name="hackathon_name" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="開催予定日" type="date" name="event_date" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="開催場所" type="text" name="event_location" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="主催者" type="text" name="organizer_name" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="課題感" type="text" name="pain" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="期待すること" type="text" name="expectation" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <select  name="join_place" class="border border-info border-2 rounded">
+                    <option value="オンサイト">オンサイト</option>
+                    <option value="オンライン">オンライン</option>
+                    <option value="オン・オフ">オン・オフ混合</option>
+                </select>
+            </div>
+            <div>
+                <p> ※ 参加方法を選択</p>
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="参加者条件" type="text" name="requirements" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="参加者上限" type="number" name="upper_limit" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <input placeholder="報酬・謝礼" type="text" name="reward" class="border border-info border-2 rounded">
+            </div>
+            <div class="mt-4 fs-4">
+                <input type="file" name="img" accept="image/*">
+            </div>
+            <div>
+                <input type="hidden" name="organizer_id">
+            </div>
 
-        <div>
-            <button>送信</button>
-        </div>
-    </form>
+            <div class="mt-4 fs-4">
+                <button type="submit" class="btn btn-info text-white">送信</button>
+            </div>
+        </form>
+
+    </div>
 
 </body>
 
