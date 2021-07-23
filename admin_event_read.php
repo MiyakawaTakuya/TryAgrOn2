@@ -56,7 +56,7 @@ if ($status == false) {
 </head>
 
 <body>
-    <h2>削除するハッカソンイベントをクリックしてください</h2>
+    <h2>削除するハッカソンイベントをクリックしてください。</h2>
     <div class="container">
         <div id="output"></div>
         <!-- class="row" -->
