@@ -2,8 +2,7 @@
 // var_dump($_GET);
 // exit();
 include("functions.php");
-session_start();
-check_session_id();
+
 
 $pdo = connect_to_db();
 
@@ -30,13 +29,14 @@ if ($status == false) {
 $main_post = "";
 $main_post = "<p><img src={$record['img']}></p>";
 $main_post .= "<h2>ハッカソン名</h2> <p>{$record['hackathon_name']}</p>";
-$main_post .= "<p>開催日 {$record['event_date']}</p>";
-$main_post .= "<p>開催場所 {$record['event_location']}</p>";
-$main_post .= "<p>解決したい課題 {$record['pain']}</p>";
-$main_post .= "<p>期待するもの {$record['expectation']}</p>";
-$main_post .= "<p>応募条件 {$record['requirements']}</p>";
-$main_post .= "<p>参加者上限 {$record['upper_limit']}人</p>";
-$main_post .= "<p>報酬 {$record['reward']}</p>";
+$main_post .= "<h2>開催日 </h2> <p>{$record['event_date']}</p>";
+$main_post .= "<h2>開催場所 </h2> <p>{$record['event_location']}</p>";
+$main_post .= "<h2>解決したい課題 </h2> <p>{$record['pain']}</p>";
+$main_post .= "<h2>期待するもの </h2> <p>{$record['expectation']}</p>";
+$main_post .= "<h2>応募条件 </h2> <p>{$record['requirements']}</p>";
+$main_post .= "<h2>参加者上限 </h2> <p>{$record['upper_limit']}人</p>";
+$main_post .= "<h2>報酬 </h2> <p>{$record['reward']}</p>";
+
 
 
 $member_id = $_GET['id'];
@@ -59,9 +59,9 @@ if ($status_member == false) {
     $result = $stmt_member->fetchAll(PDO::FETCH_ASSOC);
     $output = "";
     foreach ($result as $record_member) {
-        $output .= "<div>";
-        $output .= "<h2>{$record_member["member_name"]}</h2><p>{$record_member["created_at"]}</p>";
-        $output .= "</div>";
+        $output .= "<div><h3>{$record_member["member_name"]}</h3></div>";
+        $output .= "<div><p>{$record_member["created_at"]}</p></div>";
+
 
         unset($value);
     }
@@ -80,31 +80,30 @@ if ($status_member == false) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- マテリアルアイコン -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/show.css">
 
-    <title>ハッカソン詳細ページ</title>
+    <title>Hakathon Details</title>
 </head>
 
 <body class="body">
     <div id="particles-js"></div>
-    <div class="warapper">
+    <div id="wrapper">
 
         <div class="header">
         </div>
         <!-- コメントされる側の投稿 -->
         <h1>Hakathon Details</h1>
-        <div class="posted_card">
+        <div class="post">
             <?= $main_post ?>
             <p class="posted_time"><?= $record['post_created_at'] ?></p>
         </div>
 
-        <a href="./member_input.php?id=<?= $id ?>">応募する</a>
-
-        <!-- -->
-        <div class="comment_area">
+        <h2>現状の参加メンバーリスト</h2>
+        <div class="box">
             <?= $output ?>
         </div>
-
+        <button class="btn btn-success" href="./member_input.php?id=<?= $id ?>">このハッカソンに応募する</button>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
