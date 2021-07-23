@@ -67,6 +67,11 @@ p{
 .btn {
     margin-bottom: 24px;
 }
+.home{
+    display: flex;
+    justify-content:flex-end;
+    margin-right:30px;
+}
 
 
 section{
