@@ -45,7 +45,7 @@ if ($status == false) {
                     <li><a href="#area-2">Hackathon List</a></li>
                     <li><a href="#area-3">Hold Hackathon</a></li>
                     <li><a href="#area-4">Barchix</a></li>
-                    <li><a href="#area-4">Login</a></li>
+                    <li><a href="user_login">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -133,7 +133,7 @@ if ($status == false) {
             <img src="${x.img}" class="card-img-top" alt="...">
             </div>
             <div class="card-body text-start" >
-            <h1 class="card-title" id="hackathon_name">イベント名:${x.hackathon_name}</h1>
+            <h1 class="card-title" id="hackathon_name">ハッカソン名:${x.hackathon_name}</h1>
             <h2 class="card-title" id="event_date">開催日時:${x.event_date}</h2>
             <h2 class="card-title" id="event_location">開催場所:${x.event_location}</h2>
             <h2 class="card-title" id="reward">報酬:${x.reward}</h2>

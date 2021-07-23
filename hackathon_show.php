@@ -1,15 +1,13 @@
 <?php
-
 // var_dump($_GET);
 // exit();
 include("functions.php");
 session_start();
-// check_session_id();
+check_session_id();
 
 $pdo = connect_to_db();
 
 $id = $_GET["id"];
-
 $sql = 'SELECT * FROM events_table WHERE id=:id';
 
 $stmt = $pdo->prepare($sql);
@@ -66,7 +64,6 @@ if ($status_member == false) {
         $output .= "<div>";
         $output .= "<p>{$record_member["created_at"]}</p>";
         $output .= "</div>";
-
         $output .= "</div>";
 
         unset($value);
@@ -78,7 +75,7 @@ if ($status_member == false) {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -86,30 +83,27 @@ if ($status_member == false) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- マテリアルアイコン -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/comment.css">
+    <link rel="stylesheet" href="./css/show.css">
 
     <title>ハッカソン詳細ページ</title>
 </head>
 
-<body>
+<body class="body">
+    <div id="particles-js"></div>
     <div class="warapper">
 
         <div class="header">
 
 
         </div>
-
-
         <!-- コメントされる側の投稿 -->
+        <h1>Hakathon Details</h1>
         <div class="posted_card">
-            <!-- デザイン皆無です、お願いします -->
             <?= $main_post ?>
             <p class="posted_time"><?= $record['post_created_at'] ?></p>
         </div>
 
-        <a href="./member_input.php?id=<?=$id?>">応募する</a>
-
-
+        <a href="./member_input.php?id=<?= $id ?>">応募する</a>
 
         <!-- コメント表示 -->
         <div class="comment_area">
@@ -118,7 +112,11 @@ if ($status_member == false) {
 
 
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 
