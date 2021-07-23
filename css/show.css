@@ -80,7 +80,6 @@ display:flex;
 }
 
 
-
 .card{
     width:100%;
     border-radius: 1em;
@@ -95,8 +94,9 @@ img{
 }
 
 .post{
+    width:600px;
     display:flex;
-    justify-content:center;
+    justify-content:flex-start;
     align-items: column;
     flex-direction: column;
 }
