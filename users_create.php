@@ -1,7 +1,7 @@
 <?php
 
 include('functions.php');
-
+session_start();
 $pdo = connect_to_db();
 
 // var_dump($_POST);
@@ -48,6 +48,19 @@ if ($status == false) {
     exit();
 } else {
     header("Location:users_input.php");
+    exit();
+}
+
+if(!$val){
+    echo('ログイン情報に誤りがあります');
+    echo ('<a href="user_login.php">login</a>');
+    exit();
+}else{
+    $_SESSION['session_id']= session_id();
+    $_SESSION['is_deleted']= $val['is_deleted'];
+    $_SESSION['user_name']= $val['user_name'];
+    $_SESSION['user_id']= $val['id'];
+    header('Location:./admin_event_read.php');
     exit();
 }
 

@@ -20,7 +20,7 @@ function check_session_id()
     !isset($_SESSION["session_id"]) ||
     $_SESSION["session_id"] != session_id()
   ) {
-    header("Location:admin_event_read.php");
+    header("Location:user_login.php");
   } else {
     session_regenerate_id(true);
     $_SESSION["session_id"] = session_id();
