@@ -104,7 +104,7 @@ if ($status_member == false) {
             <?= $output ?>
         </div>
 
-        <a type="submit" class="btn btn-success" href="./member_input.php?id=<?= $id ?>">このハッカソンに応募する</a>
+        <a type="submit" class="btn btn-success" href="./member_input.php?id=<?= $id ?>">このハッカソンに応募します</a>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
