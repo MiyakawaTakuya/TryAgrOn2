@@ -10,9 +10,13 @@
 </head>
 
 <body>
+    
     <div class="text-center">
         <form action="hackathon_create.php" method="POST" enctype="multipart/form-data">
             <a class="text-secondary" href="hackathon_read.php">一覧画面</a>
+            <div class="mt-4 mb-4">
+                <h1>ハッカソン情報登録</h1>
+            </div>
             <div class="mt-4 fs-4">
                 <input placeholder="ハッカソン名" type="text" name="hackathon_name" class="border border-info border-2 rounded">
             </div>
