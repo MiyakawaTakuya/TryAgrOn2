@@ -3,7 +3,7 @@
 include('functions.php');
 $pdo = connect_to_db();
 
-$sql = 'SELECT * FROM events_table';
+$sql = 'SELECT * FROM events_table WHERE is_deleted = 0';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
@@ -45,7 +45,8 @@ if ($status == false) {
                     <li><a href="#area-2">Hackathon List</a></li>
                     <li><a href="#area-3">Hold Hackathon</a></li>
                     <li><a href="#area-4">Barchix</a></li>
-                    <li><a href="user_login">Login</a></li>
+                    <li><a href="admin_event_read.php">Hackathon Edit</a></li>
+                    <li><a href="user_login.php">Login</a></li>
                 </ul>
             </nav>
         </div>
