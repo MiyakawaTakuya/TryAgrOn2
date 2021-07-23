@@ -114,7 +114,7 @@ if ($status == false) {
         </form>
         </div>
         <div>
-         <a href = 'events_delete.php?id="id"'> delete </a>  
+         <a href = 'events_delete.php'> delete </a>  
         </div>
         </div>
         `)

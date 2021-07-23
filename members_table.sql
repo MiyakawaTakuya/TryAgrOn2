@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2021 年 7 月 22 日 10:16
+-- 生成日時: 2021 年 7 月 23 日 02:05
 -- サーバのバージョン： 10.4.19-MariaDB
 -- PHP のバージョン: 8.0.7
 
@@ -31,6 +31,7 @@ CREATE TABLE `members_table` (
   `id` int(12) NOT NULL,
   `event_id` int(12) NOT NULL,
   `member_name` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `age` int(2) NOT NULL,
   `passion` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_deleted` int(1) NOT NULL DEFAULT 0,

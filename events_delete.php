@@ -7,7 +7,7 @@ $id = $_GET["id"];
 
 $pdo = connect_to_db();
 
-$sql = "DELETE FROM events_table WHERE id=:id";
+$sql = 'UPDATE events_table SET is_deleted = 1 WHERE id=:id';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
