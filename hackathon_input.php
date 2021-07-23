@@ -9,9 +9,9 @@
     <title>ハッカソン登録画面</title>
 </head>
 
-<body>
-    
-    <div class="text-center">
+<body class="bg-light">
+    <div class="bg-white m-5 p-3 rounded">
+        <div class="text-center">
         <form action="hackathon_create.php" method="POST" enctype="multipart/form-data">
             <a class="text-secondary" href="hackathon_read.php">一覧画面</a>
             <div class="mt-4 mb-4">
@@ -65,7 +65,7 @@
                 <button type="submit" class="btn btn-info text-white">送信</button>
             </div>
         </form>
-
+</div>
     </div>
 
 </body>
