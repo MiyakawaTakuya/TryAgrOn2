@@ -28,14 +28,35 @@ if ($status == false) {
 // メインのイベント情報を表示
 $main_post = "";
 $main_post = "<p><img src={$record['img']}></p>";
-$main_post .= "<h2>ハッカソン名</h2> <p>{$record['hackathon_name']}</p>";
-$main_post .= "<h2>開催日 </h2> <p>{$record['event_date']}</p>";
-$main_post .= "<h2>開催場所 </h2> <p>{$record['event_location']}</p>";
-$main_post .= "<h2>解決したい課題 </h2> <p>{$record['pain']}</p>";
-$main_post .= "<h2>期待するもの </h2> <p>{$record['expectation']}</p>";
-$main_post .= "<h2>応募条件 </h2> <p>{$record['requirements']}</p>";
-$main_post .= "<h2>参加者上限 </h2> <p>{$record['upper_limit']}人</p>";
-$main_post .= "<h2>報酬 </h2> <p>{$record['reward']}</p>";
+$main_post .= "<div class='show_box'>";
+$main_post .= "<table>";
+$main_post .= "<tr>";
+$main_post .= "<td><h2>ハッカソン名</h2></td><td> <p>{$record['hackathon_name']}</p></td>";
+$main_post .= "</tr>";
+$main_post .= "<tr>";
+$main_post .= "<td><h2>開催日 </h2></td> <td><p>{$record['event_date']}</p></td>";
+$main_post .= "</tr>";
+$main_post .= "<tr>";
+$main_post .= "<td><h2>開催場所 </h2></td><td> <p>{$record['event_location']}</p></td>";
+$main_post .= "</tr>";
+$main_post .= "<tr>";
+$main_post .= "<td><h2>解決したい課題 </h2></td><td> <p>{$record['pain']}</p></td>";
+$main_post .= "</tr>";
+$main_post .= "<tr>";
+$main_post .= "<td><h2>期待するもの </h2></td><td> <p>{$record['expectation']}</p></td>";
+$main_post .= "</tr>";
+$main_post .= "<tr>";
+$main_post .= "<td><h2>応募条件 </h2></td><td> <p>{$record['requirements']}</p></td>";
+$main_post .= "</tr>";
+$main_post .= "<tr>";
+$main_post .= "<td><h2>参加者上限 </h2></td><td> <p>{$record['upper_limit']}人</p></td>";
+$main_post .= "</tr>";
+$main_post .= "<tr>";
+$main_post .= "<td><h2>報酬 </h2> </td><td><p>{$record['reward']}</p><td>";
+$main_post .= "</tr>";
+
+$main_post .= "</table>";
+$main_post .= "</div>";
 
 
 
@@ -60,7 +81,7 @@ if ($status_member == false) {
     $output = "";
     foreach ($result as $record_member) {
         $output .= "<div><h3>{$record_member["member_name"]}</h3></div>";
-        $output .= "<div><p>{$record_member["created_at"]}</p></div>";
+        $output .= "<div><p class='small '>{$record_member["created_at"]}</p></div>";
 
 
         unset($value);
@@ -96,15 +117,17 @@ if ($status_member == false) {
 
         <div class="header">
         </div>
+
+        
         <!-- コメントされる側の投稿 -->
         <h1>Hakathon Details</h1>
         <div class="post">
             <?= $main_post ?>
-            <p class="posted_time"><?= $record['post_created_at'] ?></p>
+            <p class="posted_time small"><?= $record['post_created_at'] ?></p>
         </div>
 
         <a type="submit" class="btn btn-info text-white" href="./member_input.php?id=<?= $id ?>">このハッカソンに応募します</a>
-        <h2>現状の参加メンバーリスト</h2>
+        <div class="mt-4"><h2>現状の参加メンバーリスト</h2></div>
         <div class="box">
             <?= $output ?>
         </div>
