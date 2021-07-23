@@ -7,7 +7,7 @@ include("functions.php");
 // $user_id = $_SESSION['id'];
 $pdo = connect_to_db();
 
-$sql = 'SELECT * FROM events_table';
+$sql = 'SELECT * FROM events_table WHERE is_deleted = 0';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
@@ -56,6 +56,7 @@ if ($status == false) {
 </head>
 
 <body>
+    <h2>削除するハッカソンイベントをクリックしてください</h2>
     <div class="container">
         <div id="output"></div>
         <!-- class="row" -->
@@ -94,7 +95,7 @@ if ($status == false) {
             output_data.push(`
         <div class="adminevents">
         <div class=" my-3" >
-        <form action="hackathon_show.php" method="get">
+        <form action="events_delete.php" method="get">
         <button type="submit" class="card" style="color: black; " >
         <div class="list">
             <div class="img">
@@ -112,9 +113,6 @@ if ($status == false) {
         </button>  
         </div>
         </form>
-        </div>
-        <div>
-         <a href = 'events_delete.php'> delete </a>  
         </div>
         </div>
         `)
