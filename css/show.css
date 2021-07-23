@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 40px;
 }
 
 
@@ -71,6 +72,11 @@ p{
     display: flex;
     justify-content:flex-end;
     margin-right:30px;
+}
+
+.show_box {
+  text-align: left;
+  margin-left: 20px;
 }
 
 
