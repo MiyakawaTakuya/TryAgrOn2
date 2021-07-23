@@ -1,10 +1,10 @@
 <?php
 
-// session_start();
+session_start();
 include("functions.php");
-// check_session_id();
+check_session_id();
 
-// $user_id = $_SESSION['id'];
+$user_id = $_SESSION['id'];
 $pdo = connect_to_db();
 
 $sql = 'SELECT * FROM events_table WHERE is_deleted = 0';
@@ -56,7 +56,8 @@ if ($status == false) {
 </head>
 
 <body>
-    <h2>削除するハッカソンイベントをクリックしてください</h2>
+    <h2>削除するハッカソンイベントをクリックしてください<div class=""></div>
+    </h2>
     <div class="container">
         <div id="output"></div>
         <!-- class="row" -->
