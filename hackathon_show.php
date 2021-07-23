@@ -84,11 +84,15 @@ if ($status_member == false) {
     <link rel="stylesheet" href="./css/show.css">
 
     <title>Hakathon Details</title>
+
 </head>
 
 <body class="body">
     <div id="particles-js"></div>
     <div id="wrapper">
+        <div class="home">
+            <a type="submit" class="text-secondary home" href="./hackathon_read.php?id=<?= $id ?>">ホーム画面に戻る</a>
+        </div>
 
         <div class="header">
         </div>
@@ -99,12 +103,13 @@ if ($status_member == false) {
             <p class="posted_time"><?= $record['post_created_at'] ?></p>
         </div>
 
+        <a type="submit" class="btn btn-info text-white" href="./member_input.php?id=<?= $id ?>">このハッカソンに応募します</a>
         <h2>現状の参加メンバーリスト</h2>
         <div class="box">
             <?= $output ?>
         </div>
 
-        <a type="submit" class="btn btn-success" href="./member_input.php?id=<?= $id ?>">このハッカソンに応募します</a>
+
 
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
