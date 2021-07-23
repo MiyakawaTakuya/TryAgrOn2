@@ -25,18 +25,18 @@
     /* object-position: center; */
 }
 
+.button{
+    margin-left:60px;
+}
+.btn{
+    margin-left:60px;
+}
+
 
 .line{
     border: solid 5px;
     color:rgba(240, 248, 255, 0.719);
     margin:10px;
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 form{
@@ -94,12 +94,12 @@ p{
 
 section{
 padding:50px 0;
-display:flex;
+/* display:flex;
     justify-content:center;
     align-items: column;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: column; */
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 .list{
