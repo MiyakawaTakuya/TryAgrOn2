@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/show.css">
     <title>ハッカソン登録画面</title>
 </head>
 
 <body>
     <form action="hackathon_create.php" method="POST" enctype="multipart/form-data">
-        <a href="item_read.php">一覧画面</a>
+        <a href="hackathon_read.php">一覧画面</a>
         <div>
             ハッカソン名: <input type="text" name="hackathon_name">
         </div>

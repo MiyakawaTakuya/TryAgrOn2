@@ -67,8 +67,8 @@ if ($status == false) {
             <div>
                 <h3>About</h3>
                 <p>"TryAgrOn"とは？ 山口県が実施するトライアスロンのような農業系のハッカソンの略称である. </p>
-                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+                <p>"農業系(Agriculture)のハッカソン(Hackathon)にTryする"の造語となります.</p>
+                <p>これまでの山口県の１次産業をIT技術を駆使し,未来へとつなげていくファーストステップとなればと思います.</p>
 
             </div>
             <!--/area1-->
@@ -91,11 +91,12 @@ if ($status == false) {
             <div>
                 <h3>Hold Hackathon</h3>
                 <p>"TryAgrOn"は農業に関わる課題解決を求める方であれば, どなたでも開催することができます. </p>
-                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+                <p>我々,Barchxが農家の方々の相談や悩みを拾い上げ, 外部のエンジニアとつなげていくことで農業の可能性を広げていきます.</p>
+                <p>外部のエンジニア達の中には自分の腕試しをしたいと思っている方々が沢山おります.</p>
+                <p>そういったエンジニア達の強い意志を農家の課題間とマッチングさせ,地域の将来を築き上げていきたいと思ってます.</p>
             </div>
-            <div class="button">
-                <button href="hackathon_input.php">ハッカソンの開催登録画面へ</button>
+            <div>
+                <a type="submit" class="btn btn-info text-white" href="./hackathon_input.php">ハッカソンの開催登録画面へ</a>
             </div>
             <!--/area3-->
         </section>
@@ -104,8 +105,10 @@ if ($status == false) {
             <div>
                 <h3>Barchix</h3>
                 <p>我々"Barchix"は,ITスキルを用いて地域の課題解決を目指すプロフェッショナル集団である. </p>
-                <p>メンバーはaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
-                <p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</p>
+                <p>メンバーはエンジニアの知見も持ち合わせている３人から構成されています.</p>
+                <p>マーケットリサーチの経験のある難波. 狐のように謎めいた振る舞いをする橋口.</p>
+                <p>いつも時間ギリギリか時間切れが習慣となっている宮川の３名から構成される. </p>
+                <p>今後の規模拡大のため, メンバーは随時募集している. </p>
             </div>
             <!--/area4-->
         </section>
