@@ -9,6 +9,8 @@ $pdo = connect_to_db();
 if (
     // 氏名
     !isset($_POST['member_name']) || $_POST['member_name'] == '' ||
+    // メールアドレス
+    !isset($_POST['email']) || $_POST['email'] == '' ||
     // 年齢
     !isset($_POST['age']) || $_POST['age'] == '' ||
     // 意気込み
@@ -37,11 +39,12 @@ $age = $_POST['age'];
 // }
 
 
-$sql = 'INSERT INTO members_table(id, event_id, member_name, age, passion, is_deleted, created_at, updated_at) VALUES(NULL, :event_id, :member_name, :age, :passion, 0, sysdate(), sysdate())';
+$sql = 'INSERT INTO members_table(id, event_id, member_name, email,age, passion, is_deleted, created_at, updated_at) VALUES(NULL, :event_id, :member_name, :email,:age, :passion, 0, sysdate(), sysdate())';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':event_id', $event_id, PDO::PARAM_STR);
 $stmt->bindValue(':member_name', $member_name, PDO::PARAM_STR);
+$stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->bindValue(':age', $age, PDO::PARAM_STR);
 $stmt->bindValue(':passion', $passion, PDO::PARAM_STR);
 $status = $stmt->execute();

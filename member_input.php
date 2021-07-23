@@ -32,6 +32,9 @@ $id = $_GET["id"];
             <input type="text" name="passion" placeholder="意気込み" class="p-2 rounded border-1" style="width: 500px;">
         </div>
         <div class="mt-4">
+            <input type="text" name="email" placeholder="メールアドレス" class="p-2 rounded border-1" style="width: 500px;">
+        </div>
+        <div class="mt-4">
             <input type="hidden" name="event_id" value="<?=$id?>">
         </div>
         <div class="mt-4">
