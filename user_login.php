@@ -24,7 +24,7 @@
             </div>
             <div class="mt-4">
                 <p class="text-secondary d-inline">初めてのユーザーですか？</p>
-                <span><a href="./users/users_input.php" class="text-primary">新規登録</a></span>
+                <span><a href="./users_input.php" class="text-primary">新規登録</a></span>
             </div>
             <!-- <a href="todo_register.php">or register</a> -->
             </form>
