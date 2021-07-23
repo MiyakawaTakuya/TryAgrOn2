@@ -29,7 +29,7 @@ if ($status == false) {
 // メインのイベント情報を表示
 $main_post = "";
 $main_post = "<p><img src={$record['img']}></p>";
-$main_post .= "<p>ハッカソン名 {$record['hackathon_name']}</p>";
+$main_post .= "<h2>ハッカソン名</h2> <p>{$record['hackathon_name']}</p>";
 $main_post .= "<p>開催日 {$record['event_date']}</p>";
 $main_post .= "<p>開催場所 {$record['event_location']}</p>";
 $main_post .= "<p>解決したい課題 {$record['pain']}</p>";
@@ -60,10 +60,7 @@ if ($status_member == false) {
     $output = "";
     foreach ($result as $record_member) {
         $output .= "<div>";
-        $output .= "<p>{$record_member["member_name"]}</p>";
-        $output .= "<div>";
-        $output .= "<p>{$record_member["created_at"]}</p>";
-        $output .= "</div>";
+        $output .= "<h2>{$record_member["member_name"]}</h2><p>{$record_member["created_at"]}</p>";
         $output .= "</div>";
 
         unset($value);
@@ -93,8 +90,6 @@ if ($status_member == false) {
     <div class="warapper">
 
         <div class="header">
-
-
         </div>
         <!-- コメントされる側の投稿 -->
         <h1>Hakathon Details</h1>
@@ -105,7 +100,7 @@ if ($status_member == false) {
 
         <a href="./member_input.php?id=<?= $id ?>">応募する</a>
 
-        <!-- コメント表示 -->
+        <!-- -->
         <div class="comment_area">
             <?= $output ?>
         </div>

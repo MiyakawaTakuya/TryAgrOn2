@@ -4,7 +4,7 @@ session_start();
 include("functions.php");
 check_session_id();
 
-$user_id = $_SESSION['id'];
+$user_id = $_SESSION['user_id'];
 $pdo = connect_to_db();
 
 $sql = 'SELECT * FROM events_table WHERE is_deleted = 0';
