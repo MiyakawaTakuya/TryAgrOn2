@@ -4,6 +4,13 @@
     align-items: center;
     flex-direction: column;
 }
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 form{
     width:100%;
@@ -22,18 +29,19 @@ body{
 h1 {font-size:26px;
 font-family: Futura;
 letter-spacing:10px;
+margin-top:24px;
 }
 
 h2 {font-size:24px;
-font-family:sans-serif;}
+font-family:sans-serif;
+font-weight:  bold;}
 
-h3 {font-size:56px;
+h3 {font-size:20px;
     color:rgb(32, 32, 32);
     font-family: Futura;
     letter-spacing: 14px;
     margin-left: 1em;
-    margin-top:24px;
-    margin-bottom:24px;
+    
 }
 h4{
     font-size:40px;
@@ -41,29 +49,25 @@ h4{
     font-family: Futura;
     letter-spacing: 14px;
     margin-left: 1em;
-    margin-top:24px;
-    margin-bottom:24px;
+    /* margin-top:24px;
+    margin-bottom:24px; */
 
 }
 
 p{
     font-family:sans-serif;
     letter-spacing: 3px;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top:12px;
+    margin-left: 20px;
+    margin-top:6px;
     margin-bottom:12px;
     font-size: 20px;
 
 }
-.center{
-    /* display:flex;
-    justify-content:center;
-    align-items: column;
-    flex-direction: column; */
-    /* margin-left: auto;
-    margin-right: auto; */
+
+.btn {
+    margin-bottom: 24px;
 }
+
 
 section{
 padding:50px 0;
@@ -75,12 +79,7 @@ display:flex;
     margin-right: auto;
 }
 
-.list{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    width:100%;
-}
+
 
 .card{
     width:100%;
@@ -95,11 +94,12 @@ img{
     border-radius: 1em 1em 1em 1em/1em 1em 1em 1em;
 }
 
-.card-img-top{
-    border-radius: 1em 0 0 1em/1em 0 0 1em;
+.post{
+    display:flex;
+    justify-content:center;
+    align-items: column;
+    flex-direction: column;
 }
-
-
 
 
 
@@ -198,7 +198,14 @@ font-size:24px;
   justify-content: center;
   align-items: center;
   text-align:center;
-  color: rgb(3, 156, 23);
+  color: rgb(45, 46, 45);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  flex-direction: column;
+  /* width:100%; */
+  /* height: 100%; */
 }
 
 /*========= particle js を描画するエリア設定 ===============*/
@@ -217,10 +224,7 @@ html,body{
 }
 
 #wrapper{
-  position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
-  z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
-  /* width:100%; */
-  /* height: 100%; */
+
 }
 
 
