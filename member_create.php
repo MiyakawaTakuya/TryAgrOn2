@@ -26,6 +26,7 @@ $member_name = $_POST['member_name'];
 $passion = $_POST['passion'];
 $event_id = $_POST['event_id'];
 $age = $_POST['age'];
+$email = $_POST['email'];
 
 // $dbn = 'mysql:dbname=gsacf_l05_06;charset=utf8;port=3306;host=localhost';
 // $user = 'root';
@@ -39,7 +40,7 @@ $age = $_POST['age'];
 // }
 
 
-$sql = 'INSERT INTO members_table(id, event_id, member_name, email,age, passion, is_deleted, created_at, updated_at) VALUES(NULL, :event_id, :member_name, :email,:age, :passion, 0, sysdate(), sysdate())';
+$sql = 'INSERT INTO members_table(id, event_id, member_name, email, age, passion, is_deleted, created_at, updated_at) VALUES(NULL, :event_id, :member_name, :email,:age, :passion, 0, sysdate(), sysdate())';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':event_id', $event_id, PDO::PARAM_STR);
