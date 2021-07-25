@@ -2,8 +2,6 @@
 // var_dump($_GET);
 // exit();
 include("functions.php");
-
-
 $pdo = connect_to_db();
 
 $id = $_GET["id"];
@@ -12,10 +10,8 @@ $sql = 'SELECT * FROM events_table WHERE id=:id';
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
-
 // var_dump($_GET);
 // exit();
-
 
 if ($status == false) {
     $error = $stmt->errorInfo();
@@ -54,11 +50,8 @@ $main_post .= "</tr>";
 $main_post .= "<tr>";
 $main_post .= "<td><h2>報酬 </h2> </td><td><p>{$record['reward']}</p><td>";
 $main_post .= "</tr>";
-
 $main_post .= "</table>";
 $main_post .= "</div>";
-
-
 
 $member_id = $_GET['id'];
 
@@ -82,8 +75,6 @@ if ($status_member == false) {
     foreach ($result as $record_member) {
         $output .= "<div><h3>{$record_member["member_name"]}</h3></div>";
         $output .= "<div><p class='small '>{$record_member["created_at"]}</p></div>";
-
-
         unset($value);
     }
 }
@@ -118,7 +109,7 @@ if ($status_member == false) {
         <div class="header">
         </div>
 
-        
+
         <!-- コメントされる側の投稿 -->
         <h1>Hakathon Details</h1>
         <div class="post">
@@ -127,7 +118,9 @@ if ($status_member == false) {
         </div>
 
         <a type="submit" class="btn btn-info text-white" href="./member_input.php?id=<?= $id ?>">このハッカソンに応募します</a>
-        <div class="mt-4"><h2>現状の参加メンバーリスト</h2></div>
+        <div class="mt-4">
+            <h2>現状の参加メンバーリスト</h2>
+        </div>
         <div class="box">
             <?= $output ?>
         </div>

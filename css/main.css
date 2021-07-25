@@ -15,29 +15,35 @@
     height:800px;
     width:100%;
     font-family: Futura;
-    /* margin-top: 240px; */
     color:rgba(240, 248, 255, 0.87);
     border: solid 2px;      /* 枠線指定 */
-    /* background-image: url(../img/top_back.JPEG);    背景画像指定 */
     background: url(../img/top_back.JPEG)center center / cover no-repeat;    /* 背景画像指定 */
     background-size:  cover;  
-    /* object-fit: cover; */
-    /* object-position: center; */
 }
 
 .bg_test2 {
-    height:800px;
-    width:100%;
-    /* background-image: url(../img/top_back.JPEG);    背景画像指定 */
     background: url(../img/diagram.png)center center / cover no-repeat;    /* 背景画像指定 */
-    background-size:  cover;  
+    background-size:  contain;  
+    height:600px;
+    width:95%;
+    text-align:  center;    
+    display:flex;
+    justify-content:center;
+    align-items: flex-end;
+}
+.bg_test-text2 {                   
+    display:  inline-block;                         /* インラインブロックにする */                            /* 余白指定 */    /* 背景色指定 */
+    /* font-family: Futura; */
+    font-size:26px;
+    letter-spacing: 6px;
+    color:rgb(113, 114, 114);
 }
 
 .button{
     margin-left:60px;
 }
 .btn{
-    margin-left:60px;
+    margin-left:90px;
 }
 
 
@@ -53,10 +59,6 @@ form{
 
 body{
     background-color: aliceblue;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-direction: column; */
 }
 
 h1 {font-size:26px;}
@@ -90,14 +92,6 @@ p{
     margin-bottom:12px;
     font-size: 20px;
 
-}
-.center{
-    /* display:flex;
-    justify-content:center;
-    align-items: column;
-    flex-direction: column; */
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 
 section{
@@ -156,7 +150,7 @@ padding:50px 0;
 	background:rgb(246, 246, 246);
 	color:rgb(36, 35, 35);
 	/* text-align: center; */
-	padding: 30px;
+	padding: 40px;
 }
 
 
