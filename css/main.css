@@ -25,6 +25,14 @@
     /* object-position: center; */
 }
 
+.bg_test2 {
+    height:800px;
+    width:100%;
+    /* background-image: url(../img/top_back.JPEG);    背景画像指定 */
+    background: url(../img/diagram.png)center center / cover no-repeat;    /* 背景画像指定 */
+    background-size:  cover;  
+}
+
 .button{
     margin-left:60px;
 }
